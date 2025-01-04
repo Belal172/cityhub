@@ -17,12 +17,140 @@ body{
     font-size: 0.88rem;
     user-select: none;
     overflow-x: hidden;
-    background: #cccc;
+    
 }
 .container{
     display: grid;
     width: 96%;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto;
+    grid-template-columns: 14rem auto 14rem;
     margin: 0 auto;
 }
+a{
+    color: rgb(59, 106, 147);
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+    font-size: 0.77rem;
+}
+small{
+   font-size:  0.75rem;
+}
+ .profile_photo img{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+ }
+/* aside */
+aside{
+height: 100vh;
+}
+aside .top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.4rem;
+    background-color: rgb(244, 240, 235);
+    margin-bottom: 1rem;
+    align-content: center;
+    height: 50px;
+}
+aside .logo{
+    display: flex;
+    gap: 1rem;
+   
+}
+/* sidebar */
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    position: relative;
+    gap: 1rem;
+    background-color: azure;
+}
+aside .sidebar a{
+    display: flex;
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    height: 3.2rem;
+    transition: all .1sec ease-in;
+    color: rgb(21, 23, 21);
+}
+aside h3{
+    font-weight: 400;
+}
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all .1sec;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+aside .sidebar a.active{
+    background-color: rgb(200, 234, 222);
+    color: rgb(17, 20, 20);
+    margin-left: 0;
+    border-left: 5px solid rgb(236, 111, 28);
+}
+aside .sidebar a .active::before{
+    content: '';
+    width: 5px;
+    height: 100%;
+    background-color: blueviolet;
+}
+aside .sidebar a:hover{
+    
+
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+    transition: .4sec ease;
+}
+
+
+/* right start */
+.right{
+    margin-top: 1.4rem;
+}
+.right h2{
+    color: rgb(26, 31, 34);
+}
+.right .top {
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+    background-color: azure;
+}
+.right .recent_updates{
+    margin-top: 1rem;
+    margin-left: -20px;
+    background-color: rgb(243, 246, 246);
+    
+}
+.right .recent_updates .updates{
+    display: flex;
+    gap: 1rem;
+    transition: all .3sec;
+    
+    
+}
+
+
+

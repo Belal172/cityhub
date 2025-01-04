@@ -1,18 +1,13 @@
 <?php
     session_start();
-    // require_once '../config/Database.php';
-    require_once '../config/Database.php';
-// if (file_exists($path)) {
-//     echo "File exists!";
-// } else {
-//     echo "File not found!";
-// }
-// exit;
+    
+    require_once 'config/Database.php';
+
     $db=new Database();
     $conn=$db->getConnection();
-
+    
     if ($_POST){
-       include_once "classes/User.php";
+       include_once "admin/classes/User.php";
        $user= new User();
        $user->login($_POST);
     }
@@ -27,16 +22,12 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
+
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href=""><b>My City</b>Hub</a>
+    <a href=""><b> City</b>Hub</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

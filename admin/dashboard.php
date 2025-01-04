@@ -48,6 +48,11 @@
                 </a>
 
                 <a href="">
+                    <span class="material-symbols-sharp">analytics </span>
+                    <h3>Analytics</h3>
+                    </a>
+
+                <a href="">
                 <span class="material-symbols-sharp">settings </span>
                 <h3>settings</h3>
                 </a>
@@ -65,13 +70,85 @@
 
         <!-- main area start -->
          <main>
-            <h1>main</h1>
+            <h1>Dashboard</h1>
+            <div class="date">
+                <input type="date">
+            </div>
 
          </main>
 
           <!-- main area end -->
+           <!-- start right -->
+           <div class="right">
+            <div class="top">
+                <div class="profile">
+                    <p><b>Milan</b></p>
+                    <p>Admin</p>
+                </div>
+                <div class="profile_photo">
+                    <img src="photos/milan1.jpg" alt="photo">
+                </div>
+
+            </div>
+            <!-- top end -->
+
+            <!-- recent updates -->
+             <div class="recent_updates">
+                <h2>recent updates</h2>
+                <div class="updates">
+                    <div class="profile_photo">
+                        <img src="photos/milan2.JPG" alt="">
+                    </div>
+                    <div class="message">
+                      <p><b>milan</b>changes password</p>
+                    </div>
+                </div>
+               
+             
+                <div class="updates">
+                    <div class="profile_photo">
+                        <img src="photos/milan2.JPG" alt="">
+                    </div>
+                    <div class="message">
+                      <p><b>milan</b>changes password</p>
+                    </div>
+                </div>
+
+                <div class="updates">
+                    <div class="profile_photo">
+                        <img src="photos/milan2.JPG" alt="">
+                    </div>
+                    <div class="message">
+                      <p><b>ramesh</b>changes password</p>
+                    </div>
+                </div>
+
+                <div class="updates">
+                    <div class="profile_photo">
+                        <img src="photos/milan2.JPG" alt="">
+                    </div>
+                    <div class="message">
+                      <p><b>roshan</b>changes password</p>
+                    </div>
+                </div>
+
+                
+             </div>
+             
+             <!-- end recent updates -->
+
+             <!-- start analytics -->
+              <div class="analytics">
+                <h2>Analytics </h2>
+
+
+              </div>
+             <!-- start analytics -->
+            
+           </div>
+           <!-- end right -->
 
     </div>
-    <!--  -->
+    <!-- container -->
 </body>
 </html>
