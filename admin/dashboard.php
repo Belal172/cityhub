@@ -9,62 +9,16 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard </title>
 </head>
 <body>
     <div class="container">
         <!-- aside section start -->
-         <aside>
-            <div class="top">
-                <div class="logo">
-                    <h3>Milan</h3>
-                </div>
-            </div>
-            <!-- top end -->
-             <div class="sidebar">
-                <a href="" class="active">
-                <span class="material-symbols-sharp">home </span>
-                <h3>Home</h3>
-                </a>
 
-                <a href="">
-                <span class="material-symbols-sharp">celebration </span>
-                <h3>Events</h3>
-                </a>
-
-                <a href="">
-                <span class="material-symbols-sharp">reminder </span>
-                <h3>Notices</h3>
-                </a>
-
-                <a href="">
-                <span class="material-symbols-sharp">ballot </span>
-                <h3>Polls</h3>
-                </a>
-
-                <a href="">
-                <span class="material-symbols-sharp">cleaning_services </span>
-                <h3>Waste schedule</h3>
-                </a>
-
-                <a href="">
-                    <span class="material-symbols-sharp">analytics </span>
-                    <h3>Analytics</h3>
-                    </a>
-
-                <a href="">
-                <span class="material-symbols-sharp">settings </span>
-                <h3>settings</h3>
-                </a>
-
-                <a href="">
-                <span class="material-symbols-sharp">logout </span>
-                <h3>Logout</h3>
-                </a>
-
-             </div>
-
-         </aside>
+        <?php
+        include_once 'includes/sidebar.php'
+        ?>
+        
 
         <!-- aside end -->
 
@@ -72,7 +26,7 @@
          <main>
             <h1>Dashboard</h1>
             <div class="date">
-                <input type="date">
+            <?php  echo date("d/m/y");  ?>
             </div>
 
          </main>

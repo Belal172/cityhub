@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    background-color: rgb(129, 26, 96);
+    color: rgb(35, 183, 183);
+}
+.logo{
+    display: flex;
+
+    text-align: left;
+  
+}
+
+
+.logoside ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.logoside ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+.logoside ul li a{
+    text-decoration: none;
+    color: white;
+}
+.logoside ul li a:hover{
+    text-decoration: none;
+    color: rgb(103, 211, 112);
+    font-size: 1.4rem;
+}

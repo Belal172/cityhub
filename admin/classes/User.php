@@ -32,7 +32,7 @@ class User{
         }else{
             $_SESSION['username']=$username;
             $_SESSION['is_user']=true;
-            header("Location:home.php");
+            header("Location:../index.php");
         }
         
     }else{
