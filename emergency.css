@@ -1,0 +1,116 @@
+/* Container for sidebar and main content */
+.container {
+    display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px; /* Fixed width for sidebar */
+    background-color: #002d5a; /* Dark blue background for sidebar */
+    color: white;
+    padding: 20px;
+    height: 100vh; /* Full height */
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+/* Main content styles */
+main {
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+    background-color: #f0f8ff; /* Light background for main content */
+}
+
+/* Emergency Contacts Table Styles */
+.emergency-table-container {
+    max-height: 400px; /* Set a maximum height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 20px 0;
+}
+
+.emergency-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.emergency-table th, .emergency-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.emergency-table th {
+    background-color: #002d5a; /* Dark blue for header */
+    color: white;
+}
+
+.emergency-table tr {
+    transition: background-color 0.3s;
+}
+
+.emergency-table tr:hover {
+    background-color: #f0f8ff; /* Light background on hover */
+}
+
+/* Background colors for each service */
+.ambulance {
+    background-color: #ffcccb; /* Light red for ambulance */
+}
+
+.fire {
+    background-color: #ffeb3b; /* Yellow for fire brigade */
+}
+
+.police {
+    background-color: #add8e6; /* Light blue for police */
+}
+
+.traffic-police {
+    background-color: #90ee90; /* Light green for traffic police */
+}
+
+.women-help {
+    background-color: #ffb6c1; /* Light pink for women help line */
+}
+
+.child-help {
+    background-color: #ffdead; /* Light beige for child help line */
+}
+
+/* Sidebar styles from the provided code */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #dfe6e9;
+    font-size: 16px;
+    padding: 12px 25px;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #ffca28;
+    color: #1b2a49;
+}
+
+/* Footer styles */
+footer {
+    background-color: #002d5a; /* Darker blue for footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

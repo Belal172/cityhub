@@ -1,0 +1,132 @@
+/* styles.css */
+
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #004e92, #fdc830);
+    background-size: 400% 400%;
+    animation: gradient-animation 8s ease infinite;
+}
+
+/* Gradient animation for background */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Login form container */
+.login-container {
+    position: relative;
+    width: 400px;
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Title styles */
+.login-container h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* Input fields */
+.login-container .input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.login-container input::placeholder {
+    color: #d3d3d3;
+}
+
+/* Button styles */
+.login-container button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: #fdc830; /* Yellow */
+    color: #004e92; /* Blue */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-container button:hover {
+    background: #fbb040; /* Darker yellow */
+}
+
+/* Remember me and forgot password */
+.login-container .form-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #d3d3d3;
+}
+
+.login-container .form-footer a {
+    text-decoration: none;
+    color: #fdc830;
+}
+
+/* Rotating glowing effect */
+.rotating-circle {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rotating-circle-2 {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    animation: rotate-reverse 12s linear infinite;
+}
+
+@keyframes rotate-reverse {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
