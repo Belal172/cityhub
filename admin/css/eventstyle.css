@@ -1,0 +1,189 @@
+*{
+    margin: 0;padding: 0;
+
+}
+
+
+/* main area start */
+main .top{
+    display: flex;
+    background-color: rgb(222, 236, 231);
+    margin-bottom: 1rem;
+    justify-content: right;
+}
+main .top .search span{
+    margin-top: 2px;
+    
+}
+
+
+main .top a{
+    display: flex;
+    margin-left: 2rem;
+    gap: 2px;
+    align-items: center;
+    height: 3.2rem;
+    transition: all .1sec ease-in;
+    color: rgb(21, 23, 21);
+} 
+/* main .events1{
+    gap: 1rem;
+    height: 7rem;
+    box-shadow: 5px 5px 7px rgb(235, 216, 216);
+    
+}
+main .events2{
+    gap: 1rem;
+    height: 7rem;
+    box-shadow: 5px 5px 7px rgb(235, 216, 216);
+    
+}
+main .events3{
+    gap: 1rem;
+    height: 7rem;
+    box-shadow: 5px 5px 7px rgb(235, 216, 216);
+    
+} */
+ /* Card Design */
+
+ .events{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+ }
+ .card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.card-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card-content .date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.card-content .category {
+    display: inline-block;
+    background: #FFD700;
+    color: #333;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.view-more {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.view-more a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.view-more a:hover {
+    color: #FFD700;
+}
+
+
+/* events Adding */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  */
+
+.form-container {
+    margin-top: 1rem;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    max-width: 100%;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="datetime-local"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}

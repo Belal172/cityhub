@@ -19,14 +19,19 @@
                 <h3>Events</h3>
                 </a>
 
-                <a href="notices.php">
-                <span class="material-symbols-sharp">reminder </span>
-                <h3>Notices</h3>
+                <a href="messages.php">
+                <span class="material-symbols-sharp">message </span>
+                <h3>Messages</h3>
                 </a>
 
                 <a href="pools.php">
                 <span class="material-symbols-sharp">ballot </span>
                 <h3>Polls</h3>
+                </a>
+
+                <a href="users.php">
+                <span class="material-symbols-sharp">person </span>
+                <h3>Users</h3>
                 </a>
 
                 <a href="ecotracker.php">
