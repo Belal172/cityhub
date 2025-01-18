@@ -99,9 +99,9 @@ aside .sidebar a span{
     transition: all .1sec;
 }
 aside .sidebar a:last-child{
-    position: absolute;
+    /* position: absolute;
     bottom: 1rem;
-    width: 100%;
+    width: 100%; */
 }
 aside .sidebar a.active{
     background-color: rgb(200, 234, 222);

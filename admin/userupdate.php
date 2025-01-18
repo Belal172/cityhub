@@ -1,5 +1,7 @@
 <?php
 require_once '../config/Database.php';
+include_once "classes/User.php";
+   $user= new User();
 session_start();
 if(!isset($_SESSION['username']) && !isset($_SESSION['is_admin'])){
     header("Location:login.php");
@@ -7,18 +9,20 @@ if(!isset($_SESSION['username']) && !isset($_SESSION['is_admin'])){
 $db=new Database();
 $conn=$db->getConnection();
 
-// if ($_POST){
-    if(isset($_POST['name'])){
-   include_once "classes/User.php";
-   $user= new User();
-   $cerated = $user->register($_POST);
-   if($cerated){
-       header("Location:users.php");
-   }else{
-       echo "try again";
-   }
-   $user->login($_POST);
+$id = $_GET['id'];
+$listRecord = $user->getRecordById($id);
+
+if(isset($_POST['name'])){
+   
+
+    $updated = $user->updateUser($_POST,$id);
+    if($updated){
+        header("Location:users.php");
+    }else{
+        echo "try again";
+    }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,25 +58,25 @@ $conn=$db->getConnection();
             <!-- Name -->
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <input type="text" id="name" name="name"value="<?php echo $listRecord['name']?>" >
             </div>
 
             <!-- Username -->
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter a username" required>
+                <input type="text" id="username" name="username" value="<?php echo $listRecord['username']?>">
             </div>
 
             <!-- Password -->
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter a password" required>
+                <input type="password" id="password" name="password" value="<?php echo $listRecord['password']?>">
             </div>
 
             <!-- Address -->
             <div class="form-group">
                 <label for="address">Address</label>
-                <textarea id="address" name="address" placeholder="Enter your address" rows="3" required></textarea>
+                <textarea id="address" name="address" value="<?php echo $listRecord['address']?>"></textarea>
             </div>
 
             <!-- Gender -->
@@ -81,13 +85,13 @@ $conn=$db->getConnection();
             <!-- Date of Birth -->
             <div class="form-group">
                 <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" required>
+                <input type="date" id="dob" name="dob" value="<?php echo $listRecord['dob']?>">
             </div>
 
             <!-- Role -->
             <div class="form-group">
                 <label for="role">Role</label>
-                <select id="role" name="role" required>
+                <select id="role" name="role" value="<?php echo $listRecord['role']?>">
                     <option value="">Select your role</option>
                     <option value="student">admin</option>
                     <option value="teacher">user</option>
@@ -98,13 +102,13 @@ $conn=$db->getConnection();
             <!-- Email -->
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" value="<?php echo $listRecord['email']?>">
             </div>
 
             <!-- Contact -->
             <div class="form-group">
                 <label for="contact">Contact</label>
-                <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+                <input type="tel" id="contact" name="contact"value="<?php echo $listRecord['contact']?>">
             </div>
 
             <!-- Submit Button -->

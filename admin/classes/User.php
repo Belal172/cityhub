@@ -45,7 +45,72 @@ class User{
     
 
  }
+ public function listUser()
+ {
+     $result = $this->conn->prepare("select * from users where deleted_at is null");
+     $result->execute();
+     return $result->fetchAll();
+ }
+ public function register($data){
+    $result = $this->conn->prepare("insert into users (name,username,password, email,address, contact,dob,role) 
+    values (:name,:username,:password,:email,:address,:contact,:dob,:role)");
+        
+    $result->bindParam(':name', $data['name']);
+    $result->bindParam(':address', $data['address']);
+    $result->bindParam(':email', $data['email']);
+    $result->bindParam(':contact', $data['contact']);
+    $result->bindParam(':password', $data['password']);
+    $result->bindParam(':username', $data['username']);
+    
+    $result->bindParam(':dob', $data['dob']);
+    $result->bindParam(':role', $data['role']);
+    if($result->execute()){
+        return true;
+    }else{
+        return false;
+    }
+    
+
+}
+public function getRecordById($id)
+{
+    $result = $this->conn->prepare("select * from users where id = :id");
+    $result->bindParam(':id', $id);
+    $result->execute();
+    return $result->fetch();
 }
 
+public function updateUser($data, $id)
+{
+    
+    $result = $this->conn->prepare("update users set name = :name,username=:username,password=:password,email=:email, address=:address,  contact=:contact,dob=:dob,role=:role where id =:id");
 
+    $result->bindParam(':name', $data['name']);
+    $result->bindParam(':address', $data['address']);
+    $result->bindParam(':email', $data['email']);
+    $result->bindParam(':contact', $data['contact']);
+    $result->bindParam(':password', $data['password']);
+    $result->bindParam(':username', $data['username']);
+    
+    $result->bindParam(':dob', $data['dob']);
+    $result->bindParam(':role', $data['role']);
+    $result->bindParam(':id', $id);
+    if($result->execute()){
+        return true;
+    }else{
+        return false;
+    }
+}
+public function deleteUser($id){
+    $result = $this->conn->prepare("update users set deleted_at = :date where id = :id");
+    $result->bindParam(':date', date('Y-m-d H:i:s'));
+    $result->bindParam(':id', $id);
+    if($result->execute()){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+}
 ?>

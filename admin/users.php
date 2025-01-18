@@ -1,5 +1,14 @@
 <?php
+    session_start();
+    if(!isset($_SESSION['username']) && !isset($_SESSION['is_admin'])){
+        header("Location:login.php");
+    }
 
+    require 'classes/User.php';
+    $informations = new User();
+
+    $lists = $informations->listUser();
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,23 +62,35 @@
                             <th>Name</th>
                             <th>userName</th>
                             <th>Email</th>
-                            <th>Gender</th>
+                            
                             <th>Role</th>
                             <th>Address</th>
                             <th>Edit | Delete</th>
 
                         </tr>
 
-                        <tr>
-                            <td>1.</td>
-                            <td>Hari</td>
-                            <td>hari123</td>
-                            <td>hari555@gmail.com</td>
-                            <td>male</td>
-                            <td>user</td>
-                            <td>kailali,dhangadhi</td>
-                            <td><a href="">Edit</a> <a href="">delete</a></td>
-                        </tr>
+                        <?php 
+                        $i = 1;
+                        foreach( $lists as $list){
+                        ?>
+                            <tr>
+                                <td><?php echo $i;?></td>
+                                <td><?php echo $list['name'];?></td>
+                                <td><?php echo $list['username'];?></td>
+                                
+                                <td><?php echo $list['email'];?></td>
+                                
+                                <td><?php echo $list['role'];?></td>
+                                <td><?php echo $list['address'];?></td>
+                                
+                                
+                                <td>
+                                    <a href="userupdate.php?id=<?php echo $list['id'];?>">Edit</a> 
+                                     | 
+                                     <a href="usersdelete.php?id=<?php echo $list['id'];?>" onclick="return confirm('Are you sure want to delete this record?');"> Delete</a>
+                                    </td>
+                            </tr>
+                        <?php $i++ ;} ?>
                     </table>
 
                 </div>
