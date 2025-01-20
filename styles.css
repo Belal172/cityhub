@@ -1,0 +1,89 @@
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the background stays contained */
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(pexels-hebaysal-773471.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.5); /* Adds blur and darkens the background */
+    z-index: -1; /* Ensures it stays behind the form */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Compact form size */
+    padding: 20px;
+    border-radius: 15px;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Darker glass effect */
+    backdrop-filter: blur(15px); /* Enhances glassmorphism for the form */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Floating effect for form */
+    z-index: 1; /* Places the form above the background */
+}
+
+.form label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff; /* White text for labels */
+}
+
+.form input,
+.form select,
+.form button {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for inputs */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent inputs */
+    color: #ffffff; /* White text inside inputs */
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+    border-color: #3f51b5; /* Focus border color */
+    box-shadow: 0 0 5px #3f51b5; /* Glow effect on focus */
+}
+
+.btn {
+    border-radius: 8px;
+    width: 60%;
+    margin: auto;
+    background-color: #3f51b5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #1e3a8a; /* Darker shade on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.form input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Lighter placeholders for inputs */
+}
+
+.form h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
